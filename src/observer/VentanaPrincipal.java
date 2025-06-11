@@ -1,4 +1,4 @@
-package Observer;
+package observer;
 
 import javax.swing.*;
 import java.awt.*;
@@ -24,7 +24,7 @@ public class VentanaPrincipal extends JFrame {
         add(btnRojo);
         add(btnVerde);
         add(btnAzul);
-        add(labelContador);  // Muestra el contador
+        add(labelContador);  // contador
 
         btnRojo.addActionListener(e -> cambiarColor(Color.RED, "Rojo"));
         btnVerde.addActionListener(e -> cambiarColor(Color.GREEN, "Verde"));
@@ -51,6 +51,6 @@ public class VentanaPrincipal extends JFrame {
         SwingUtilities.invokeLater(() -> {
             VentanaPrincipal ventana = new VentanaPrincipal(sujeto);
             ventana.setVisible(true);
-        });
-    }
+        });
+    }
 }

@@ -1,9 +1,6 @@
-package Apects;
+package observer;
 
 import java.awt.Color;
-
-import observer.VentanaPrincipal;
-import observer.pointcut;
 
 public aspect ColorAspect {
 
@@ -17,14 +14,16 @@ public aspect ColorAspect {
     after(Color color, String nombreColor, VentanaPrincipal ventana) : cambioColor(color, nombreColor, ventana) {
         contadorCambios++;
 
-        
+        // Notificar a observadores
         ventana.getSujeto().notificar("AspectJ: El color cambió a " + nombreColor);
 
-        
+        // Imprimir en consola
         System.out.println("AspectJ: El color cambió a " + nombreColor);
         System.out.println("Número de cambios acumulados: " + contadorCambios);
 
-        
-        ventana.actualizarContador(contadorCambios);
+        // Actualizar contador en la GUI de forma segura
+        javax.swing.SwingUtilities.invokeLater(() -> {
+            ventana.actualizarContador(contadorCambios);
+        });
     }
 }
