@@ -1,5 +1,11 @@
 # Tarea01-Aspectos-Grupo02
 
+###integrantes
+Joseph Moreno
+Manuel Matute
+Gustavo Moscoso
+Wendland Arias
+
 Funcionalidad adicional: Contador de cambios de color
 Se implementó un contador que registra cuántas veces se ha cambiado el color de fondo de la ventana.
 
