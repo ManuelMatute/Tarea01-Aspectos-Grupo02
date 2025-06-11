@@ -1,6 +1,6 @@
 # Tarea01-Aspectos-Grupo02
 
-###integrantes
+## Integrantes
 Joseph Moreno
 Manuel Matute
 Gustavo Moscoso
