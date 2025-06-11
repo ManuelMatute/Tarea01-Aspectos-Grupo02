@@ -1,4 +1,4 @@
-package Observer;
+package Apects;
 
 import java.awt.Color;
 
